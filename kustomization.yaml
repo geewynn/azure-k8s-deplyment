@@ -8,3 +8,4 @@ resources:
   - configmap.yaml
   - service.yaml
   - secrets.yaml
+  - ingress.yaml
