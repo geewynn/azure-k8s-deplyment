@@ -1,4 +1,3 @@
-# flux.tf
 # IMPORTANT: Register provider first: az provider register --namespace Microsoft.KubernetesConfiguration
 
 resource "azurerm_kubernetes_cluster_extension" "flux" {

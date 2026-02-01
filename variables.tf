@@ -162,3 +162,28 @@ variable "flux_ssh_private_key_path" {
   description = "Path to SSH private key for Flux"
   type        = string
 }
+
+
+## CNPG Backup Storage
+variable "cnpg_storage_account_name" {
+  description = "Name of the storage account for CNPG backups"
+  type        = string
+}
+
+variable "cnpg_storage_replication_type" {
+  description = "Replication type for backup storage (LRS, GRS, ZRS)"
+  type        = string
+  default     = "LRS"
+}
+
+variable "cnpg_backup_containers" {
+  description = "List of backup container names (one per customer)"
+  type        = list(string)
+  default     = ["customer1"]
+}
+
+variable "cnpg_sas_expiry_hours" {
+  description = "SAS token expiry in hours"
+  type        = number
+  default     = 17520  # 2 years
+}
